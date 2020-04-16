@@ -12,7 +12,6 @@ export function axiosAuthWrapper({method, url, params=undefined, data=undefined}
     .catch((err) => {
         if (err.response.status === 401)
             action();
-        else 
-            throw err;
+        throw err;
     });
 }

@@ -22,8 +22,7 @@ axiosAW({
 
 ```
 
-This will print to browser console if the request was unauthorized.
-Response code 401.
+This will print to browser console if the request was unauthorized (response code 401).
 
 You are still able to treat this as a normal axios request promise.
 
