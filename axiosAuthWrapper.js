@@ -1,14 +1,11 @@
 
 TOKEN_KEY = 'put-here-your-key'
 
-export function axiosAuthWrapper({method, url, params=undefined, data=undefined}, action=undefined) {
-    return axios({
-        method: method,
-        url: url,
-        params: params,
-        data: data,
-        headers : { 'Authorization' : 'Bearer ' + localStorage.getItem(TOKEN_KEY) } 
-    })
+export function axiosAuthWrapper(config, action=undefined) {
+    config.headers = config.headers || {};
+    config.headers.Authorization = 'Bearer ' + localStorage.getItem(TOKEN_KEY);
+    
+    return axios(config)
     .catch((err) => {
         if (err.response.status === 401)
             action();
