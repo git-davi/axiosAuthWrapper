@@ -4,9 +4,14 @@ Simple and elegant axios.js wrapper for bearer token authentication
 ### Requirements
 - [axios](https://github.com/axios/axios)
 
+## Setup
+
+Place (or import) your TOKEN_KEY for local storage access inside axiosAuthWrapper.js.
+
 ## Usage
 
 Example :
+
 ```javascript
 import { axiosAuthWrapper as axiosAW } from './axiosAuthWrapper';
 
