@@ -7,7 +7,7 @@ export function axiosAuthWrapper(config, action=undefined) {
     
     return axios(config)
     .catch((err) => {
-        if (err.response.status === 401)
+        if (err.response !== undefined && err.response.status === 401)
             action();
         throw err;
     });
