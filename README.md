@@ -1,6 +1,9 @@
 # axiosAuthWrapper
 
-Simple and elegant axios.js wrapper for bearer token authentication
+Simple and elegant axios.js wrapper for bearer token authentication.  
+For this snippet to work the server must send `401 Unauthorized` response for an invalid token.  
+Also the token shouldn't be hardcoded in you code, instead you have to saved it on you local storage.  
+
 ### Requirements
 - [axios](https://github.com/axios/axios)
 
